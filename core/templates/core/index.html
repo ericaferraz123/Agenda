@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 <body>
     <div>
-        <h1>Agende seu Compromisso Aqui: </h1>
-        <form action="">
+        <h1>Agende seu Compromisso Aqui:</h1>
+        
+        <!-- Seu formulário HTML estático -->
+        <form action="" method="post">
+            {% csrf_token %}
             <label for="nome">Digite o seu Compromisso: </label>
             <input type="text" id="nome" name="nome">
             <label for="horario">Escolha o horario para o Compromisso: </label>
-            <input type="datetime" id="horario" name="horario">
+            <input type="datetime-local" id="horario" name="horario">
+            <button type="submit">Agendar</button>
         </form>
+
+        <hr>
+
+        <!-- Formulário Django dinâmico -->
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Agendar</button>
+        </form>
+
     </div>
 </body>
 </html>

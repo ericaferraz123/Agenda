@@ -1,7 +1,5 @@
 from django import forms
-from .models import Compromisso
 
-class CompromissoForm(forms.ModelForm):
-    class Meta:
-        model = Compromisso
-        fields = ['titulo', 'descricao', 'data_inicio', 'data_fim']
+class CompromissoForm(forms.Form):
+    nome = forms.CharField(label='Compromisso', max_length=200)
+    horario = forms.DateTimeField(label='Horário')
