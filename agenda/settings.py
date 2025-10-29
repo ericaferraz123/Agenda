@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY', 'chave_de_desenvolvimento_insegura')
+SECRET_KEY = 'django-insecure-y4dwbonvjw%_%knj2_wiku_08x^1f#&xadycls_e9egwl-#z^+'
 
 DEBUG = True
 
@@ -35,7 +35,7 @@ ROOT_URLCONF = 'agenda.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-                        'DIRS': [BASE_DIR / 'templates'],  # pasta para templates globais
+                        'DIRS': [BASE_DIR / 'templates'], 
 
         'DIRS': [BASE_DIR / "templates"],
 
