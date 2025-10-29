@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core'
 ]
 
 MIDDLEWARE = [
@@ -34,7 +35,10 @@ ROOT_URLCONF = 'agenda.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # pasta para templates globais
+                        'DIRS': [BASE_DIR / 'templates'],  # pasta para templates globais
+
+        'DIRS': [BASE_DIR / "templates"],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
